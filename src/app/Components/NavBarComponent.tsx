@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function NavBarComponent() {
 
-    const {pregunta,setPregunta}=useContextPregunta()
+    const {pregunta,setPregunta,puntaje,setPuntaje}=useContextPregunta()
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -17,7 +17,7 @@ export default function NavBarComponent() {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li className="nav-item">
-                            <Link className="nav-link" href="/carrito"><span className='badge text-bg-warning'>{}</span> Carrito</Link>
+                            <Link className="nav-link" href="/carrito"><span className='badge text-bg-warning'>{puntaje}</span> puntos</Link>
                         </li>
 
 

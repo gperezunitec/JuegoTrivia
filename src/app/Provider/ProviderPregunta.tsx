@@ -13,12 +13,12 @@ export default function ProviderPregunta({children}:Plantilla) {
 
 
     const [pregunta, setPregunta] = useState<Pregunta[]>([])
-
+    const [puntaje, setPuntaje] = useState<number>(0)
 
 
     return (
 
-        <contextPregunta.Provider value={{pregunta,setPregunta }}>
+        <contextPregunta.Provider value={{pregunta,setPregunta,puntaje,setPuntaje }}>
             <NavBarComponent></NavBarComponent>
             {children}
         </contextPregunta.Provider>
